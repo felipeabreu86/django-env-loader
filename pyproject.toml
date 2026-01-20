@@ -1,6 +1,6 @@
 [project]
 name = "django-env-loader"
-version = "1.0.4"
+version = "1.0.5"
 description = "Gerenciador robusto de variáveis de ambiente e secrets para Django"
 readme = "README.md"
 packages = [{include = "django_env_loader", from = "src"}]
