@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from django_env_loader import DjangoEnvLoader, EnvLoader
+from django_env_loader.loader import DjangoEnvLoader, EnvLoader
 
 
 @pytest.fixture(autouse=True)

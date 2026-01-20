@@ -1,34 +1,19 @@
 [project]
 name = "django-env-loader"
-version = "1.0.0"
-description = "Pacote para gerenciamento de variáveis de ambiente e secrets"
-authors = [
-    {name = "Felipe Abreu",email = "felipeabreu.rj@gmail.com"}
-]
-readme = "README.md"
-requires-python = ">=3.10,<4.0"
-dependencies = [
-    "dotenv (>=0.9.9,<0.10.0)"
-]
-
-[tool.poetry]
-name = "django-env-loader"
-version = "1.0.0"  # Incremente a versão
+version = "1.0.4"
 description = "Gerenciador robusto de variáveis de ambiente e secrets para Django"
-authors = ["Felipe Abreu <felipeabreu.rj@gmail.com>"]
 readme = "README.md"
 packages = [{include = "django_env_loader", from = "src"}]
-license = "MIT"  # Adicione uma licença
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    {name = "Felipe Abreu", email = "felipeabreu.rj@gmail.com"}
+]
 keywords = ["django", "env", "environment", "secrets", "docker"]
-homepage = "https://github.com/felipeabreu86/django-env-loader"
-repository = "https://github.com/felipeabreu86/django-env-loader"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -36,35 +21,35 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Framework :: Django",
 ]
+dependencies = [
+    "python-dotenv>=1.0.0,<2.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/felipeabreu86/django-env-loader"
+Repository = "https://github.com/felipeabreu86/django-env-loader"
+"Bug Tracker" = "https://github.com/felipeabreu86/django-env-loader/issues"
+
+[tool.poetry]
+packages = [{ include = "django_env_loader", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-python-dotenv = "^0.9.9"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 pytest-mock = "^3.0.0"
+ruff = "^0.14.0"
+mypy = "^1.19.1"
+taskipy = "^1.14.1"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[dependency-groups]
-test = [
-    "pytest (>=9.0.2,<10.0.0)",
-]
-lint = [
-    "ruff (>=0.14.10,<0.15.0)"
-]
-dev = [
-    { include-group = "test" },
-    { include-group = "lint" },
-    "mypy (>=1.19.1,<2.0.0)",
-    "taskipy (>=1.14.1,<2.0.0)"
-]
-
 # ============================================================
-# Ruff - Linter, Formatter e Organizador de Imports
+# Ruff
 # ============================================================
 [tool.ruff]
 src = ["src", "tests"]
@@ -94,13 +79,13 @@ docstring-code-format = true
 skip-magic-trailing-comma = false
 
 [tool.ruff.lint.isort]
-known-first-party = ["src"]
+known-first-party = ["django_env_loader"]
 combine-as-imports = true
 force-single-line = false
 lines-between-types = 1
 
 # ============================================================
-# Pytest - Testes Automatizados
+# Pytest
 # ============================================================
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -110,12 +95,11 @@ python_functions = ["test_*"]
 addopts = "-ra -q --disable-warnings"
 
 # ============================================================
-# Mypy - Checagem de Tipo Estática
+# Mypy
 # ============================================================
 [tool.mypy]
 python_version = "3.10"
-plugins = ["pydantic.mypy"]
-mypy_path = ["src"]
+mypy_path = ["."]
 ignore_missing_imports = true
 disallow_untyped_defs = true
 check_untyped_defs = true
@@ -125,11 +109,11 @@ warn_unreachable = true
 strict_equality = true
 exclude = [
     "tests/",
-    "migrations/",
+    ".venv/",
 ]
 
 # ============================================================
-# Scripts
+# Taskipy
 # ============================================================
 [tool.taskipy.tasks]
 lint = "ruff check --fix ."

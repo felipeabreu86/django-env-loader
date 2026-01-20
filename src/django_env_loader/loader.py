@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 
 from django_env_loader.exceptions import SecretNotFoundError, ValidationError
 
-__version__ = "1.0.0"
+__version__ = "1.0.4"
 __all__ = ["EnvLoader", "EnvConfig", SecretNotFoundError, ValidationError]
 
 logger = logging.getLogger(__name__)

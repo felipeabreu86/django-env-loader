@@ -602,13 +602,13 @@ Contribuições são bem-vindas! Por favor:
 
 ## 📝 Changelog
 
-Veja o arquivo [CHANGELOG](CHANGELOG.md) para histórico de mudanças.
+Veja o arquivo [CHANGELOG](https://github.com/felipeabreu86/django-env-loader/blob/main/CHANGELOG.md) para histórico de mudanças.
 
 ---
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](https://github.com/felipeabreu86/django-env-loader/blob/main/LICENSE) para detalhes.
 
 ---
 
