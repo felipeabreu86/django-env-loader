@@ -602,7 +602,7 @@ Contribuições são bem-vindas! Por favor:
 
 ## 📝 Changelog
 
-Veja o arquivo [CHANGELOG.md](CHANGELOG.md) para histórico de mudanças.
+Veja o arquivo [CHANGELOG](CHANGELOG.md) para histórico de mudanças.
 
 ---
 
