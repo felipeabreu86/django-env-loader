@@ -602,19 +602,7 @@ Contribuições são bem-vindas! Por favor:
 
 ## 📝 Changelog
 
-### [1.0.0] - 2024-01-20
-
-#### Added
-- Suporte inicial a variáveis de ambiente
-- Docker secrets com fallback automático
-- Conversores type-safe para bool, int, float, list, dict
-- Validadores customizados
-- Cache configurável de secrets
-- Helpers especializados para Django
-- Suporte a prefixos
-- Strict mode e warn_on_missing
-- Documentação completa
-- Testes com cobertura > 95%
+Veja o arquivo [CHANGELOG.md](CHANGELOG.md) para histórico de mudanças.
 
 ---
 
@@ -626,14 +614,13 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 📬 Suporte
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/django-env-loader/issues)
-- **Discussões**: [GitHub Discussions](https://github.com/yourusername/django-env-loader/discussions)
+- **Issues**: [GitHub Issues](https://github.com/felipeabreu86/django-env-loader/issues)
+- **Discussões**: [GitHub Discussions](https://github.com/felipeabreu86/django-env-loader/discussions)
 
 ---
 
 ## 🔗 Links Úteis
 
-- [Documentação completa](https://django-env-loader.readthedocs.io/)
 - [PyPI](https://pypi.org/project/django-env-loader/)
-- [Código fonte](https://github.com/yourusername/django-env-loader)
-- [Exemplos](https://github.com/yourusername/django-env-loader/tree/main/examples)
+- [Código fonte](https://github.com/felipeabreu86/django-env-loader)
+- [Exemplos](https://github.com/felipeabreu86/django-env-loader/tree/main/examples)
