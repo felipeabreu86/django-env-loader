@@ -12,7 +12,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - CLI para validação de variáveis
 - Integração com Pydantic Settings
 
-## [1.0.0] - 2024-01-20
+## [1.0.5] - 2024-01-20
 
 ### Added
 - Implementação inicial do EnvLoader
